@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function dis(val){
+            document.getElementById("result").value+=val
+        }
+        function clr(){
+            document.getElementById("result").value=null
+        }
+        function ans(){
+            let x=document.getElementById("result").value   
+            let y=eval(x)
+            document.getElementById("result").value=y
+
+        }
+    </script>
+    <style>
+        .btn{
+            width: 100%;
+            height: 100%;
+            background-color: lightgray;
+            font-size: medium;
+        }
+        table{
+            margin: auto;
+            height: 300px;
+            width: 300px;
+        }
+        #result{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="2">
+            <tr>
+                <td colspan="4" style="height: 57px;"><input type="text" id="result" value=" "></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="2" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="3" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="+" class="btn" onclick="dis(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="5" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="6" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="-" class="btn" onclick="dis(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="8" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="9" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="/" class="btn" onclick="dis(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="%" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="0" class="btn" onclick="dis(value)"></td>
+                <td><input type="button" value="x" class="btn" onclick="dis(value)"></td>
+                <td rowspan="2"><input type="button" value="=" class="btn" onclick="ans()"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="reset" value="Reset/Clear" class="btn" onclick="clr()"></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
